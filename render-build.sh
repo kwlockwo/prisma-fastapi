@@ -2,8 +2,8 @@
 # exit on error
 set -o errexit
 
-npm install
-# npm run build # uncomment/add any other setup commands
+pip install -r requirements.txt
+prisma generate
 
 # Store/pull Puppeteer cache with build cache
 if [[ ! -d $PRISMA_BINARY_CACHE_DIR ]]; then
